@@ -15,9 +15,10 @@ wordAnalizer.addEventListener('keypress', (e) => {
     }
 });
 
-bChecar.addEventListener('click', () =>{
+bClear.addEventListener('click', () =>{
     wordAnalizer.value = '';
-})
+    wordAnalizer.focus();
+});
 
 bChecar.addEventListener('click', () => {
     const entradaOriginal = wordAnalizer.value.trim();
@@ -42,4 +43,3 @@ bChecar.addEventListener('click', () => {
         resultado.textContent = `😥 A palavra ou frase: "${entradaOriginal}" não é um palíndromo.`;
     }
 });
-
